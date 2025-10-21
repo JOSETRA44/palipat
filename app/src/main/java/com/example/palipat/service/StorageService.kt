@@ -1,4 +1,4 @@
-package com.example.palipat.data
+package com.example.palipat.service
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.first
 import java.lang.reflect.Type
 
-class TimerStorage(context: Context) {
+class StorageService(context: Context) {
     private val gson = Gson()
     private val store: DataStore<Preferences> = PreferenceDataStoreFactory.create(
         produceFile = { context.preferencesDataStoreFile("timers_prefs") }
